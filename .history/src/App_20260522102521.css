@@ -59,8 +59,6 @@ body {
   justify-content: center;
   text-align: center;
   padding: 40px 20px;
-  background: linear-gradient(180deg, #f8fbff 0%, #eef6ff 100%);
-  padding: 40px 20px;
 }
 
 .tagline {
@@ -71,6 +69,13 @@ body {
   font-size: 13px;
   font-weight: 700;
   margin-bottom: 22px;
+}
+
+.hero h1 {
+  font-size: 56px;
+  line-height: 0.95;
+  margin: 0;
+  letter-spacing: -2px;
 }
 
 .description {
@@ -146,13 +151,8 @@ body {
   }
 
   .hero h1 {
-  font-size: 56px;
-  line-height: 0.95;
-  margin: 0;
-  letter-spacing: -2px;
-  color: #0f172a;
-  font-weight: 900;
-}
+    font-size: 40px;
+  }
 
   .features {
     grid-template-columns: 1fr;
