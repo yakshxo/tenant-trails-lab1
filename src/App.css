@@ -9,6 +9,18 @@ body {
   color: #0f172a;
 }
 
+a {
+  text-decoration: none;
+}
+
+button,
+input,
+select {
+  font-family: inherit;
+}
+
+/* Landing Page */
+
 .page {
   min-height: 100vh;
 }
@@ -38,17 +50,15 @@ body {
 .nav-actions a {
   color: #111827;
   font-size: 14px;
-  text-decoration: none;
 }
 
-.nav-actions button {
+.nav-button {
   background: #2563eb;
-  color: white;
+  color: white !important;
   border: none;
   padding: 10px 18px;
   border-radius: 8px;
   font-weight: 700;
-  cursor: pointer;
 }
 
 .hero {
@@ -60,7 +70,6 @@ body {
   text-align: center;
   padding: 40px 20px;
   background: linear-gradient(180deg, #f8fbff 0%, #eef6ff 100%);
-  padding: 40px 20px;
 }
 
 .tagline {
@@ -71,6 +80,15 @@ body {
   font-size: 13px;
   font-weight: 700;
   margin-bottom: 22px;
+}
+
+.hero h1 {
+  font-size: 56px;
+  line-height: 0.95;
+  margin: 0;
+  letter-spacing: -2px;
+  color: #0f172a;
+  font-weight: 900;
 }
 
 .description {
@@ -93,6 +111,7 @@ body {
   border-radius: 10px;
   font-weight: 800;
   cursor: pointer;
+  display: inline-block;
 }
 
 .primary-btn {
@@ -140,27 +159,303 @@ body {
   line-height: 1.5;
 }
 
-@media (max-width: 700px) {
-  .navbar {
-    padding: 0 18px;
-  }
+/* Auth Pages */
 
-  .hero h1 {
-  font-size: 56px;
-  line-height: 0.95;
-  margin: 0;
-  letter-spacing: -2px;
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: linear-gradient(135deg, #f8fafc, #eef6ff);
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 430px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 32px;
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.08);
+}
+
+.auth-card h1 {
+  margin: 0 0 6px;
+  color: #2563eb;
+  font-size: 28px;
+}
+
+.auth-card p {
+  color: #64748b;
+  margin-top: 0;
+  margin-bottom: 22px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-bottom: 16px;
+}
+
+.form-field label {
+  font-size: 14px;
+  font-weight: 700;
+  color: #334155;
+}
+
+.form-field input {
+  padding: 12px 13px;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+  font-size: 15px;
+}
+
+.form-field input:focus {
+  outline: 2px solid #bfdbfe;
+  border-color: #2563eb;
+}
+
+.error {
+  color: #dc2626;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.full-btn {
+  width: 100%;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 9px;
+  padding: 13px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.small-text {
+  font-size: 14px;
+  text-align: center;
+  margin: 18px 0 0 !important;
+}
+
+.small-text a {
+  color: #2563eb;
+  font-weight: 800;
+}
+
+.demo-box {
+  margin-top: 16px;
+  padding: 12px;
+  border-radius: 9px;
+  background: #eff6ff;
+  color: #2563eb;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* Dashboard */
+
+.dashboard-page {
+  min-height: 100vh;
+  background: #f8fafc;
+}
+
+.dashboard-nav {
+  height: 64px;
+  display: grid;
+  grid-template-columns: 190px 1fr auto;
+  align-items: center;
+  gap: 24px;
+  padding: 0 32px;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.nav-search {
+  width: 100%;
+  max-width: 520px;
+  padding: 11px 14px;
+  border: 1px solid #dbe3ef;
+  border-radius: 999px;
+  background: #f8fafc;
+}
+
+.user-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #334155;
+  font-weight: 700;
+}
+
+.avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #eff6ff;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+}
+
+.user-area button {
+  background: transparent;
+  border: none;
+  color: #0f172a;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.dashboard-content {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 42px 24px;
+}
+
+.dashboard-content h1 {
+  font-size: 34px;
+  margin: 0 0 6px;
   color: #0f172a;
   font-weight: 900;
 }
 
+.dashboard-subtitle {
+  margin: 0 0 18px;
+  color: #64748b;
+}
+
+.stats-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+.stats-row span {
+  background: #eff6ff;
+  color: #2563eb;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.filters-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.filters-row select {
+  padding: 10px 12px;
+  border-radius: 9px;
+  border: 1px solid #cbd5e1;
+  background: white;
+  font-weight: 700;
+  color: #334155;
+}
+
+.apartment-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.apartment-card {
+  overflow: hidden;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.06);
+}
+
+.apartment-image {
+  height: 140px;
+  background: linear-gradient(135deg, #dbeafe, #94a3b8);
+  position: relative;
+}
+
+.rating {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  background: white;
+  color: #0f172a;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.apartment-body {
+  padding: 18px;
+}
+
+.apartment-body h2 {
+  margin: 0 0 6px;
+  font-size: 20px;
+  color: #0f172a;
+  font-weight: 800;
+}
+
+.address {
+  color: #64748b;
+  margin: 0 0 14px;
+  font-size: 14px;
+}
+
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-bottom: 14px;
+}
+
+.tag-row span {
+  background: #eff6ff;
+  color: #2563eb;
+  padding: 6px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  color: #64748b;
+}
+
+.empty-message {
+  text-align: center;
+  margin-top: 40px;
+  color: #64748b;
+  font-weight: 700;
+}
+
+@media (max-width: 850px) {
+  .dashboard-nav {
+    grid-template-columns: 1fr;
+    height: auto;
+    padding: 18px;
+  }
+
+  .apartment-grid,
   .features {
     grid-template-columns: 1fr;
   }
 
-  .hero-buttons {
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero-buttons,
+  .filters-row {
     flex-direction: column;
-    width: 100%;
-    max-width: 280px;
   }
 }
